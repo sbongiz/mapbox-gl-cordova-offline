@@ -47,7 +47,7 @@ class Database {
     static copyDatabaseFile(dbLocation, dbName, targetDir) {
         console.log("Copying database to application storage directory");
         return new Promise(function (resolve, reject) {
-            const absPath =  cordova.file.applicationDirectory + 'www/' + dbLocation;
+            const absPath =  cordova.file.externalDataDirectory + "trento/layer.mbtiles ";
             resolveLocalFileSystemURL(absPath, resolve, reject);
         }).then(function (sourceFile) {
             return new Promise(function (resolve, reject) {
