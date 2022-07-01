@@ -50,7 +50,7 @@ class Database {
         console.log("dbName: " + dbName)
         console.log("targetDir: " + targetDir);
         return new Promise(function (resolve, reject) {
-            const absPath =  cordova.file.externalDataDirectory + "trento/layer.mbtiles";
+            const absPath =  cordova.file.externalDataDirectory + dbLocation;
             console.log("absPath: " + absPath);
             resolveLocalFileSystemURL(absPath, resolve, reject);
         }).then(function (sourceFile) {
