@@ -12,11 +12,11 @@
     "build-prod-min": "rollup -c --environment BUILD:production,MINIFY:true"
   },
   "keywords": [],
-  "author": "Oscar Fonts <oscar.fonts@geomati.co>",
+  "author": "Antonio Sciarretta",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
     "type": "git",
-    "url": "git@github.com:oscarfonts/mapbox-gl-cordova-offline.git"
+    "url": "git@github.com:sbongiz/mapbox-gl-cordova-offline.git"
   },
   "devDependencies": {
     "@mapbox/flow-remove-types": "1.3.0-await.upstream.1",

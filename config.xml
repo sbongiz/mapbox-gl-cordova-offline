@@ -4,8 +4,8 @@
     <description>
         Offline vector maps in Cordova using Mapbox GL JS
     </description>
-    <author email="oscar.fonts@geomati.co" href="http://geomati.co">
-        Oscar Fonts
+    <author href="http://www.mountainmaps.it">
+        Antonio Sciarretta
     </author>
     <content src="index.html" />
     <access origin="*" />
