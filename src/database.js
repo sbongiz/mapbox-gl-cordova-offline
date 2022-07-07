@@ -50,7 +50,12 @@ class Database {
         console.log("dbName: " + dbName)
         console.log("targetDir: " + targetDir);
         return new Promise(function (resolve, reject) {
-            const absPath =  cordova.file.externalDataDirectory + dbLocation;
+            var absPath;
+            if(device.platform === 'Android') {
+                absPath = cordova.file.externalDataDirectory + dbLocation;
+            } else {
+                absPath = cordova.file.documentsDirectory + dbLocation;
+            }
             console.log("absPath: " + absPath);
             resolveLocalFileSystemURL(absPath, resolve, reject);
         }).then(function (sourceFile) {

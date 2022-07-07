@@ -1,4 +1,4 @@
-/* Mapbox GL JS is licensed under the 3-Clause BSD License. Full text of license: https://github.com/mapbox/mapbox-gl-js/blob/v0.2.2/LICENSE.txt */
+/* Mapbox GL JS is licensed under the 3-Clause BSD License. Full text of license: https://github.com/mapbox/mapbox-gl-js/blob/v0.2.4/LICENSE.txt */
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 typeof define === 'function' && define.amd ? define(factory) :
@@ -17311,7 +17311,12 @@ Database.copyDatabaseFile = function copyDatabaseFile (dbLocation, dbName, targe
     console.log('dbName: ' + dbName);
     console.log('targetDir: ' + targetDir);
     return new Promise(function (resolve, reject) {
-        var absPath = cordova.file.externalDataDirectory + dbLocation;
+        var absPath;
+        if (device.platform === 'Android') {
+            absPath = cordova.file.externalDataDirectory + dbLocation;
+        } else {
+            absPath = cordova.file.documentsDirectory + dbLocation;
+        }
         console.log('absPath: ' + absPath);
         resolveLocalFileSystemURL(absPath, resolve, reject);
     }).then(function (sourceFile) {
