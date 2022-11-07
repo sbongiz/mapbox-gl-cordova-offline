@@ -1,6 +1,6 @@
 {
   "name": "mapbox-gl-cordova-offline",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Offline vector maps in Cordova using Mapbox GL JS",
   "main": "www/mapbox-gl-cordova-offline.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "eslint-config-mourner": "3.0.0",
     "eslint-plugin-flowtype": "3.2.1",
     "live-server": "1.2.1",
-    "mapbox-gl": "0.53.1",
+    "mapbox-gl": "2.7.1",
     "npm-run-all": "4.1.2",
     "pako": "1.0.6",
     "rollup": "^0.66.2",
